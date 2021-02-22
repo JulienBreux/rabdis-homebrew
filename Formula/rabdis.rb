@@ -5,24 +5,24 @@
 class Rabdis < Formula
   desc "🐰 Rabdis – Play with redis keys from RabbitMQ messages"
   homepage "https://github.com/julienbreux/rabdis/"
-  version "0.11.2"
+  version "0.12.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/JulienBreux/rabdis/releases/download/v0.11.2/rabdis_0.11.2_Darwin_x86_64.tar.gz"
-    sha256 "e3a59ee3119bac66b06d8df7d353121032f2178b958d09f3cc21354015a2c73b"
+    url "https://github.com/JulienBreux/rabdis/releases/download/v0.12.0/rabdis_0.12.0_Darwin_x86_64.tar.gz"
+    sha256 "9e6eea45c8f127d65e339421fb94da7a811362cabb2e3c7a55118c1ee3332a9d"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/JulienBreux/rabdis/releases/download/v0.11.2/rabdis_0.11.2_Darwin_arm64.tar.gz"
-    sha256 "9ce33174c7cfc8d04af2324dbced4153d2056ed6ce705e9bb712dbb0fcdbdbd6"
+    url "https://github.com/JulienBreux/rabdis/releases/download/v0.12.0/rabdis_0.12.0_Darwin_arm64.tar.gz"
+    sha256 "42041cd9772dbdf4beca99dfbd7ccb0b6e839897952211fbf5c54b928fcec764"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/JulienBreux/rabdis/releases/download/v0.11.2/rabdis_0.11.2_Linux_x86_64.tar.gz"
-    sha256 "362dba03701fa30dd559ff138c57bd5e82f369b3f9660b33c8a3e2e464ca73ee"
+    url "https://github.com/JulienBreux/rabdis/releases/download/v0.12.0/rabdis_0.12.0_Linux_x86_64.tar.gz"
+    sha256 "7a21d9076f769418838702f5741f444172267d2af9925cfa6cc3a013d9617d24"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/JulienBreux/rabdis/releases/download/v0.11.2/rabdis_0.11.2_Linux_arm64.tar.gz"
-    sha256 "2510fe59e490fc1cba4a95599f0a9f341f53cfe36b7d7bd1bf23f05dd2585d47"
+    url "https://github.com/JulienBreux/rabdis/releases/download/v0.12.0/rabdis_0.12.0_Linux_arm64.tar.gz"
+    sha256 "1fe1a10c60d3bd8ae3eddf52649c40814e30f86c6160a2ee6c52aa0115cc167d"
   end
 
   def install
