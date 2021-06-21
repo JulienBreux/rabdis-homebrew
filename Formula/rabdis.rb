@@ -5,24 +5,29 @@
 class Rabdis < Formula
   desc "🐰 Rabdis – Play with redis keys from RabbitMQ messages"
   homepage "https://github.com/julienbreux/rabdis/"
-  version "0.12.0"
+  version "0.14.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/JulienBreux/rabdis/releases/download/v0.12.0/rabdis_0.12.0_Darwin_x86_64.tar.gz"
-    sha256 "9e6eea45c8f127d65e339421fb94da7a811362cabb2e3c7a55118c1ee3332a9d"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/JulienBreux/rabdis/releases/download/v0.14.0/rabdis_0.14.0_Darwin_x86_64.tar.gz"
+      sha256 "f78d1cc2d7cac3d2fd979d9b6199fde2962d206e5658ba9dd9f0b09d6f3f5544"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/JulienBreux/rabdis/releases/download/v0.14.0/rabdis_0.14.0_Darwin_arm64.tar.gz"
+      sha256 "4d2641e796807369c5395f599a49d7030c46a196e97c9b2f30f625a1f766ad88"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/JulienBreux/rabdis/releases/download/v0.12.0/rabdis_0.12.0_Darwin_arm64.tar.gz"
-    sha256 "42041cd9772dbdf4beca99dfbd7ccb0b6e839897952211fbf5c54b928fcec764"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/JulienBreux/rabdis/releases/download/v0.12.0/rabdis_0.12.0_Linux_x86_64.tar.gz"
-    sha256 "7a21d9076f769418838702f5741f444172267d2af9925cfa6cc3a013d9617d24"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/JulienBreux/rabdis/releases/download/v0.12.0/rabdis_0.12.0_Linux_arm64.tar.gz"
-    sha256 "1fe1a10c60d3bd8ae3eddf52649c40814e30f86c6160a2ee6c52aa0115cc167d"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/JulienBreux/rabdis/releases/download/v0.14.0/rabdis_0.14.0_Linux_x86_64.tar.gz"
+      sha256 "47ebff350ffa339c7d89637095817e90edbb1ae73cf7e3470e8af65815cf09c9"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/JulienBreux/rabdis/releases/download/v0.14.0/rabdis_0.14.0_Linux_arm64.tar.gz"
+      sha256 "6fc1df2bbdd096761b980b156d8d86acc125c1d11252b12cb71a340d91de1a75"
+    end
   end
 
   def install
