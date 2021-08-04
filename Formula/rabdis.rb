@@ -11,22 +11,22 @@ class Rabdis < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/JulienBreux/rabdis/releases/download/v0.14.0/rabdis_0.14.0_Darwin_x86_64.tar.gz"
-      sha256 "f78d1cc2d7cac3d2fd979d9b6199fde2962d206e5658ba9dd9f0b09d6f3f5544"
+      sha256 "e0481709d36bc057097d0a7c9103d36d3c2c978646755af05ffcae0f9d44ef67"
     end
     if Hardware::CPU.arm?
       url "https://github.com/JulienBreux/rabdis/releases/download/v0.14.0/rabdis_0.14.0_Darwin_arm64.tar.gz"
-      sha256 "4d2641e796807369c5395f599a49d7030c46a196e97c9b2f30f625a1f766ad88"
+      sha256 "947b77d8fca1d548ddabbed63b74268aaeefdd0e31747056ff68525775384aa0"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/JulienBreux/rabdis/releases/download/v0.14.0/rabdis_0.14.0_Linux_x86_64.tar.gz"
-      sha256 "47ebff350ffa339c7d89637095817e90edbb1ae73cf7e3470e8af65815cf09c9"
+      sha256 "b5cde00cc8374703a11179e0d915a85dbcb24fdb1da72b66b68cdb3972d7c695"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/JulienBreux/rabdis/releases/download/v0.14.0/rabdis_0.14.0_Linux_arm64.tar.gz"
-      sha256 "6fc1df2bbdd096761b980b156d8d86acc125c1d11252b12cb71a340d91de1a75"
+      sha256 "bec69ecabfa122c095519264260bd52f296fb311038474d6e4d91624af5b1620"
     end
   end
 
